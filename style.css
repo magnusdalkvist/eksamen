@@ -200,10 +200,19 @@ section {
     flex-direction: column;
 }
 
-.full_page .box_content {
+#projects.full_page .box_content {
     overflow-y: scroll;
     height: 100%;
     scrollbar-color: black;
+}
+
+#about.full_page .box_content {
+    overflow-y: hidden;
+    display: flex;
+    height: 100%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .full_page .img_container {
