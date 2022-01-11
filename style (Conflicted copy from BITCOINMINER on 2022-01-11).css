@@ -51,22 +51,6 @@ nav {
     transition: transform 1s;
 }
 
-.menu a {
-    text-decoration: none;
-}
-
-.purple {
-    text-shadow: blueviolet .5rem .5rem;
-}
-
-.green {
-    text-shadow: #4CE314 .5rem .5rem;
-}
-
-.blue {
-    text-shadow: #2025E3 .5rem .5rem;
-}
-
 main {
     height: 100%;
     width: 100%;
@@ -76,7 +60,7 @@ main {
 
 .rotate {
     transform: rotate(45deg);
-    text-shadow: blueviolet .5rem .2rem;
+    text-shadow: blueviolet .5rem .3rem;
 }
 
 .reset {
@@ -85,7 +69,7 @@ main {
 
 section {
     height: 100vh;
-    padding: 0 1%;
+    padding: 0 5%;
     display: grid;
     justify-content: center;
     align-items: center;
@@ -95,9 +79,14 @@ section {
 #projects, #about {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-items: center;
     align-content: center;
-    gap: 4rem;
+}
+
+.full_page {
+    gap: 0;
+    flex-direction: column;
+
 }
 
 .title {
@@ -195,14 +184,11 @@ section {
 
 .full_page .box_background {
     width: 90%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
 }
 
 .full_page .box_content {
     overflow-y: scroll;
-    height: 100%;
+    height: 500px;
     scrollbar-color: black;
 }
 
@@ -329,6 +315,11 @@ h2 {
     -webkit-text-stroke: black 3px;
     color: white;
     font-family: all-round-gothic, sans-serif;
+    text-shadow: #4CE314 .3rem .3rem;
+}
+
+#about h2 {
+    text-shadow: #2025E3 .3rem .3rem;
 }
 
 .img_container {
@@ -337,6 +328,7 @@ h2 {
 
 .img_container img {
     max-width: 350px;
+    width: 100%;
     border-radius: .75rem;
     border: solid black 3px;
     box-shadow: black .5rem .5rem;
@@ -350,6 +342,7 @@ h2 {
 
 #about .img_container img {
     max-width: 500px;
+    width: 100%;
 
 }
 
@@ -358,11 +351,7 @@ h2 {
     display: grid;
     justify-items: center;
     align-content: center;
-    gap: 2rem;
-}
-
-.text h2 {
-    margin: 0;
+    margin: 5%;
 }
 
 .button {
@@ -406,53 +395,18 @@ h2 {
 
 
 
-
-/* ipad */
-@media  (max-width: 1200px) {
-    .title_left {
-        font-size: 6rem;
-    }
-    .title_right {
-        font-size: 6rem;
-    }
-    .title_center {
-        font-size: 2rem;
-    }
-    .fa-arrow-circle-down {
-        font-size: 4rem
-    }
-    .box_content {
-        padding: 2rem;
-    }
-    .img_grid {
-        gap: 2rem;
-    }
-    .img_container img {
-        width: 200px;
-    }
-    #about .img_container img {
-        width: 400px;
-    
-    } 
-}
-
 /* iphone */
-@media (max-width: 820px) {
+@media (max-width: 375px) {
     .menu_button {
         font-size: 5rem;
         -webkit-text-stroke: 2px black;
         text-shadow: blueviolet 0.3rem 0.3rem;
         margin: 0 2rem;
-        
-    }
-    .rotate {
-        transform: rotate(45deg);
-        text-shadow: blueviolet .3rem .1rem;
     }
     h2 {
         -webkit-text-stroke: 2px black;
-        font-size: 3rem;
-    }  
+        font-size: 4rem;
+    }
     .title {
         -webkit-text-stroke: 2px black;
         text-shadow: blueviolet 0.3rem 0.3rem;
@@ -471,8 +425,7 @@ h2 {
         font-size: 3rem
     }
     .button{
-        border-width: 2px;
-        box-shadow: black 0.25rem 0.25rem; 
+        box-shadow: black 0.3rem 0.3rem; 
     }
     .text .link {
         font-size: 1rem;
@@ -480,58 +433,11 @@ h2 {
     .link p {
         padding: 1rem .5rem;
     }
-    .box_background {
-        border-width: 2px;
-        box-shadow: black 0.25rem 0.25rem;
-    }
-    .box_top {
-        border-bottom-width: 2px;
-        border-radius: .6rem .6rem 0 0;
-    }
-    .header_dot {
-        height: 7px;
-        width: 7px;
-    }
     .box_content {
-        padding: 1rem;
+        padding: 3rem;
     }
     .img_grid {
-        gap: 1rem;
-    }
-    .img_container img {
-        width: 125px;
-        border-width: 2px;
-        box-shadow: black 0.25rem 0.25rem;
-    }
-    #about .img_container img {
-        width: 250px;
-    
-    }
-    .green {
-        text-shadow: #4CE314 .25rem .25rem;
-    } 
-    .blue {
-        text-shadow: #2025E3 .25rem .25rem;
-    }
-    p {
-        font-size: .875rem;
-    }
-}
-
-/* portrait */
-@media (orientation: portrait){
-    .tema {
+        display: flex;
         flex-direction: column;
-        gap: 1rem;
-    }
-    .full_page .img_container {
-        width: 100%;
-    }
-    .full_page .img_container img {
-        width: 100%;
-    }
-    #projects, #about {
-        flex-direction: column;
-        justify-content: center;
     }
 }
